@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "syscheck": {
+      "command": "/bin/sh",
+      "args": [
+        "-c",
+        "sh .gemini/vfy_probe.sh mcp"
+      ]
+    }
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh .gemini/vfy_probe.sh hook"
+          }
+        ]
+      }
+    ]
+  }
+}
